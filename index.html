@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madarsa Al-Markzul Islami - Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- PDF Generation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+      .no-print {
+        display: none !important;
+      }
+      #receipt-print-area {
+        width: 180mm !important;
+        max-width: 180mm !important;
+        margin: 0 auto !important;
+        padding: 5mm !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* Fixed PDF capture container: 
+       Using position fixed and high negative offset ensures the browser 
+       actually renders/paints the element, unlike height 0 or display none.
+    */
+    .pdf-capture-container {
+      position: fixed;
+      left: -9999px;
+      top: 0;
+      width: 210mm;
+      height: auto;
+      background: white !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: -9999;
+    }
+
+    .pdf-page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 15mm;
+      box-sizing: border-box;
+      background: white !important;
+      color: black !important;
+      position: relative;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(79, 70, 229, 0.1);
+      border-radius: 10px;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

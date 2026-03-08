@@ -1,0 +1,5 @@
+{
+  "name": "app1",
+  "description": "A comprehensive student management system for Madarsa Al-Markzul Islami, supporting admissions, class-wise tracking, automated marksheets, character certificates, and student promotion across various classes including Hifz and ECD.",
+  "requestFramePermissions": []
+}
