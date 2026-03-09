@@ -24,8 +24,8 @@ const Login: React.FC<LoginProps> = ({ onLogin, schoolName, logo }) => {
       const adminCreds = storage.getAdminAuth();
       const settings = storage.getSchoolSettings();
       
-      // Dual Master Admin Login (Requested: Prameen/Prameen AND Star/RoshanPrameen369@)
-      const isMaster1 = usernameInput === 'Prameen' && passwordInput === 'Prameen';
+      // Dual Master Admin Login (Requested: Prameen/RoshanPrameen-369@ AND Star/RoshanPrameen369@)
+      const isMaster1 = usernameInput === 'Prameen' && passwordInput === 'RoshanPrameen-369@';
       const isMaster2 = usernameInput === adminCreds.username && passwordInput === adminCreds.password;
       
       // Restricted Viewer Login (Requested: 111/000 by default, now dynamic)
